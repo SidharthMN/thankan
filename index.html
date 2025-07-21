@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THANKAN CHETTAN</title>
+  <style>
+    body {
+      display: grid;
+      background-color: black;
+      background-image: url('./thankan-thankan-chettan.gif'); 
+      background-size: cover; 
+      color: aliceblue;
+      font-size: larger;
+      grid-template-areas:
+        "header header header header"
+        "subhead subhead image image"
+        "subhead subhead image image"
+        "text text text text"
+        "link link link link";
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    h1 {
+      grid-area: header;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      color: aqua;
+    }
+
+    h2 {
+      grid-area: subhead;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(255, 0, 0);
+    }
+
+    img {
+      grid-area: image;
+      height: 400px;
+      width: 400px;
+      justify-self: center;
+    }
+
+
+    p {
+      grid-area: text;
+      text-align: center;
+      color: red;
+    }
+
+    a {
+      grid-area: link;
+      text-align: center;
+      color: rgb(151, 245, 0);
+    }
+
+    a:hover {
+     color: yellow;
+    }
+
+     /* Responsive layout for larger screens */
+    @media (min-width: 400px) {
+      body {
+        grid-template-areas:
+          "header header"
+          "image image"
+          "subhead subhead"
+          "text text"
+          "link link";
+        grid-template-columns: 1fr 1fr;
+      }
+
+      h1, p, a {
+        grid-column: span 2;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to My Website</h1>
+  <h2>Njan aada Thankan</h2>
+  <img src="./thankan-thankan-chettan.gif" alt="fire thankan" />
+  <p>This is a simple HTML page.</p>
+  <a href="https://www.thankan.com">Contact Me</a>
+
+</body>
+</html>
